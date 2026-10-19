@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="km">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10151f">
+  <title>RULE KMER SUVIVAL — Account</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="brand">
+      <div class="mark">RKS</div>
+      <div><p class="eyebrow">CAMBODIA SURVIVAL GAME</p><h1>RULE KMER <span>SUVIVAL</span></h1></div>
+    </header>
+
+    <section class="panel">
+      <div class="tabs">
+        <button id="tab-register" class="tab active" type="button">បង្កើតគណនី</button>
+        <button id="tab-login" class="tab" type="button">ចូលគណនី</button>
+      </div>
+
+      <div id="status" class="status" role="status">សូមកំណត់ Firebase config មុនប្រើប្រាស់។</div>
+
+      <label for="playerName">ឈ្មោះអ្នកលេង</label>
+      <input id="playerName" maxlength="20" placeholder="ឧ. KhmerWarrior" autocomplete="nickname">
+
+      <label for="phone">លេខទូរស័ព្ទ (មានលេខកូដប្រទេស)</label>
+      <input id="phone" type="tel" placeholder="+85512345678" autocomplete="tel" inputmode="tel">
+
+      <div id="recaptcha-container"></div>
+      <button id="send-code" class="primary" type="button">ផ្ញើ OTP តាម SMS</button>
+
+      <div id="otp-area" hidden>
+        <label for="otp">លេខកូដ OTP</label>
+        <input id="otp" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="បញ្ចូលលេខកូដ 6 ខ្ទង់">
+        <button id="verify-code" class="primary" type="button">ផ្ទៀងផ្ទាត់ និងបន្ត</button>
+      </div>
+
+      <div id="profile" class="profile" hidden>
+        <h2>គណនីអ្នកលេង</h2>
+        <p id="profile-name"></p>
+        <p id="profile-phone"></p>
+        <p class="muted">Player ID: <code id="profile-id"></code></p>
+        <button id="signout" class="secondary" type="button">ចាកចេញ</button>
+      </div>
+      <p class="fineprint">លេខទូរស័ព្ទត្រូវបញ្ចូលជាមួយលេខកូដប្រទេស ដូចជា +855។ OTP អាចមានថ្លៃ SMS។</p>
+    </section>
+    <footer>© RULE KMER SUVIVAL · Player Account</footer>
+  </main>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
